@@ -532,23 +532,25 @@ body { font-family: 'Open Sans', sans-serif; color: #222; overflow-x: hidden; ba
   .logo        { height: 66px; }
   .nav-inner   { min-height: 72px; }
 
-  /* Hero */
-  .hero-grid {
-    grid-template-columns: 1fr;
-    min-height: auto;
-    padding: 36px 0 32px;
-    text-align: center;
-  }
-  .hero-rays { display: none; }
-  .h1-white, .h1-red { font-size: 52px; }
-  .hero-tagline  { font-size: 19px; }
-  .hero-desc     { max-width: 100%; margin-left: auto; margin-right: auto; }
-  .rating-row    { justify-content: center; }
-  .trust-row     { justify-content: center; }
-  .hero-buttons  { justify-content: center; }
-  .hero-phone    { justify-content: center; }
-  .hero-image    { margin-top: 28px; }
-  .hero-image img { max-width: 300px; }
+/* Hero */
+.hero-grid {
+  grid-template-columns: 1fr;
+  min-height: auto;
+  padding: 32px 0 24px;
+  text-align: center;
+  gap: 0;
+}
+.hero-rays { display: none; }
+.h1-white, .h1-red { font-size: 52px; }
+.hero-tagline  { font-size: 19px; }
+.hero-desc     { max-width: 100%; margin-left: auto; margin-right: auto; }
+.rating-row    { justify-content: center; }
+.trust-row     { justify-content: center; }
+.hero-buttons  { justify-content: center; flex-direction: column; }
+.btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+.hero-phone    { justify-content: center; }
+.hero-image    { margin-top: 16px; }
+.hero-image img { max-width: 260px; animation: none; }
 
   /* Reviews */
   .reviews-section { padding: 40px 0; }
