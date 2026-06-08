@@ -3,739 +3,204 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Godley Plumbing | No Clogs. No Worries.</title>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700;800&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-:root{
-  --navy:#0b1d35;
-  --navy2:#0a1628;
-  --red:#cc1f1f;
-  --red2:#e02020;
-  --white:#ffffff;
-  --yellow:#f5c518;
-  --gray:#f5f5f5;
-  --dark-blue:#071524;
-}
-body{font-family:'Open Sans',sans-serif;color:#222;overflow-x:hidden;}
+<title>Godley Plumbing</title>
 
-/* ===== TOP BAR ===== */
-.top-bar{
-  background:var(--red2);
-  display:flex;justify-content:space-between;align-items:center;
-  padding:8px 40px;
-  font-family:'Oswald',sans-serif;font-size:13.5px;font-weight:600;
-  color:#fff;letter-spacing:.8px;text-transform:uppercase;
-}
-.top-bar .left{display:flex;align-items:center;gap:8px;}
-.top-bar .right{display:flex;align-items:center;gap:7px;font-size:14.5px;}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-/* ===== NAV ===== */
-nav{
-  background:var(--navy);
-  display:flex;align-items:center;justify-content:space-between;
-  padding:6px 36px;
-}
-.nav-logo img{height:90px;width:auto;display:block;}
-.nav-links{display:flex;gap:30px;list-style:none;}
-.nav-links a{
-  color:#fff;text-decoration:none;
-  font-family:'Oswald',sans-serif;font-size:14px;font-weight:500;
-  letter-spacing:1.2px;text-transform:uppercase;
-  transition:color .2s;
-}
-.nav-links a:hover{color:var(--red2);}
-.nav-call{
-  background:var(--red2);color:#fff;border:none;
-  padding:11px 18px;border-radius:5px;
-  font-family:'Oswald',sans-serif;font-size:15px;font-weight:700;
-  display:flex;align-items:center;gap:8px;text-decoration:none;
-  letter-spacing:.3px;white-space:nowrap;cursor:pointer;
-  line-height:1.2;
-}
-.nav-call .call-top{font-size:11px;font-weight:500;letter-spacing:.5px;display:block;opacity:.9;}
-.nav-call .call-num{font-size:16px;font-weight:800;display:block;}
-
-/* ===== HERO ===== */
-.hero{
-  background:
-    radial-gradient(ellipse 70% 90% at 72% 50%, rgba(14,45,95,.25) 0%, transparent 65%),
-    linear-gradient(135deg, #071524 0%, #0b1d35 35%, #0e2344 65%, #0f2a52 100%);
-  display:grid;grid-template-columns:52% 48%;
-  min-height:570px;position:relative;overflow:hidden;
-  padding:44px 44px 44px 56px;align-items:center;
-}
-
-/* Rays behind right side */
-.hero-rays{
-  position:absolute;right:0;top:0;width:52%;height:100%;
-  background:repeating-conic-gradient(from -10deg at 110% 50%,
-    rgba(255,255,255,.018) 0deg 5deg,
-    transparent 5deg 10deg);
-  pointer-events:none;z-index:0;
-}
-
-.hero-left{position:relative;z-index:2;}
-
-/* MAIN HEADLINE */
-.hero-h1{
-  font-family:'Oswald',sans-serif;
-  font-size:80px;font-weight:800;
-  line-height:.92;color:#fff;
-  text-transform:uppercase;
-  letter-spacing:-1px;
-  text-shadow:3px 5px 18px rgba(0,0,0,.6);
-  margin-bottom:4px;
-}
-.hero-h1 .line-red{color:var(--red2);}
-
-.hero-tagline{
-  font-family:'Oswald',sans-serif;
-  font-size:24px;font-weight:700;font-style:italic;
-  color:#fff;text-transform:uppercase;letter-spacing:.5px;
-  margin:10px 0 14px;
-  text-shadow:1px 3px 8px rgba(0,0,0,.5);
-}
-
-.hero-desc{
-  color:rgba(255,255,255,.82);font-size:14.5px;line-height:1.6;
-  max-width:400px;margin-bottom:16px;
-}
-
-/* STARS */
-.stars-row{display:flex;align-items:center;gap:8px;margin-bottom:20px;}
-.stars{color:var(--yellow);font-size:22px;letter-spacing:1px;line-height:1;}
-.stars-txt{
-  color:#fff;font-size:13.5px;font-weight:600;
-  display:flex;align-items:center;gap:5px;
-}
-.g-dot{
-  width:20px;height:20px;border-radius:50%;
-  background:#fff;display:inline-flex;align-items:center;justify-content:center;
-  font-weight:900;font-size:12px;color:#4285f4;font-family:Arial,sans-serif;
-  flex-shrink:0;
-}
-
-/* TRUST PLACARDS */
-.trust-row{display:flex;gap:20px;margin-bottom:26px;flex-wrap:wrap;}
-.trust-item{
-  display:flex;flex-direction:column;align-items:center;gap:5px;
-  font-family:'Oswald',sans-serif;font-size:10.5px;font-weight:700;
-  color:#fff;text-transform:uppercase;letter-spacing:.5px;text-align:center;
-}
-.trust-circle{
-  width:44px;height:44px;border-radius:50%;
-  border:2px solid rgba(255,255,255,.35);
-  display:flex;align-items:center;justify-content:center;
-  background:rgba(255,255,255,.07);
-}
-.trust-circle svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
-
-/* BUTTONS */
-.btns{display:flex;gap:12px;margin-bottom:22px;flex-wrap:wrap;align-items:center;}
-.btn-red{
-  background:var(--red2);color:#fff;border:none;
-  padding:15px 26px;border-radius:5px;cursor:pointer;
-  font-family:'Oswald',sans-serif;font-size:17px;font-weight:700;
-  text-transform:uppercase;letter-spacing:.5px;
-  display:flex;align-items:center;gap:9px;text-decoration:none;
-  box-shadow:0 4px 18px rgba(224,32,32,.45);
-  transition:transform .15s,box-shadow .15s;white-space:nowrap;
-}
-.btn-red:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(224,32,32,.6);}
-.btn-outline{
-  background:transparent;color:#fff;
-  border:2.5px solid rgba(255,255,255,.8);
-  padding:12px 24px;border-radius:5px;cursor:pointer;
-  font-family:'Oswald',sans-serif;font-size:16px;font-weight:700;
-  text-transform:uppercase;letter-spacing:.5px;text-decoration:none;
-  transition:all .15s;white-space:nowrap;
-}
-.btn-outline:hover{background:#fff;color:var(--navy);}
-
-/* PHONE */
-.phone-row{display:flex;align-items:center;gap:10px;}
-.ph-circle{
-  width:38px;height:38px;border-radius:50%;
-  background:var(--red2);display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;
-}
-.ph-circle svg{width:18px;height:18px;fill:#fff;}
-.ph-num{
-  font-family:'Oswald',sans-serif;font-size:30px;font-weight:800;
-  color:#fff;letter-spacing:.5px;
-}
-.ph-arrow{color:var(--red2);font-size:22px;font-weight:700;}
-.ph-tap{
-  font-family:'Open Sans',sans-serif;font-style:italic;
-  font-size:13.5px;color:var(--red2);font-weight:700;
-}
-
-/* HERO RIGHT IMAGE */
-.hero-right{
-  position:relative;z-index:2;
-  display:flex;align-items:center;justify-content:center;
-}
-.hero-right img{
-  width:100%;max-width:540px;
-  filter:drop-shadow(0 24px 48px rgba(0,0,0,.6));
-  animation:floatImg 3.5s ease-in-out infinite;
-}
-@keyframes floatImg{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-10px);}
-}
-
-/* ===== REVIEWS ===== */
-.reviews{background:#fff;padding:56px 56px 52px;}
-.sec-title{
-  display:flex;align-items:center;justify-content:center;gap:14px;
-  font-family:'Oswald',sans-serif;font-size:16px;font-weight:700;
-  text-transform:uppercase;letter-spacing:2.5px;color:var(--navy);
-  margin-bottom:28px;
-}
-.sec-title::before,.sec-title::after{
-  content:'';display:block;height:2px;width:80px;background:var(--red2);flex-shrink:0;
-}
-.rev-grid{display:grid;grid-template-columns:1fr 1fr 270px;gap:20px;align-items:stretch;}
-.rev-card{
-  background:#fff;border:1px solid #e2e2e2;border-radius:8px;
-  padding:22px;box-shadow:0 2px 12px rgba(0,0,0,.07);
-  display:flex;flex-direction:column;
-}
-.rev-stars{color:var(--yellow);font-size:20px;letter-spacing:1px;margin-bottom:8px;}
-.rev-quote{
-  color:var(--red2);font-size:36px;line-height:.7;
-  font-family:Georgia,serif;font-weight:700;
-  margin-bottom:8px;
-}
-.rev-text{font-size:13.5px;color:#444;line-height:1.65;flex:1;margin-bottom:16px;}
-.rev-author{
-  font-weight:700;font-size:13px;color:var(--navy);
-  display:flex;align-items:center;justify-content:space-between;
-}
-.g-logo{
-  width:28px;height:28px;
-  background:white;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 1px 4px rgba(0,0,0,.2);
-}
-.g-logo svg{width:16px;height:16px;}
-
-/* Review count badge */
-.rev-badge{
-  background:var(--navy);border-radius:8px;padding:26px 20px;
-  text-align:center;color:#fff;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:4px;
-}
-/* Shield outline */
-.shield-wrap{margin-bottom:8px;}
-.shield-wrap svg{width:50px;height:50px;fill:none;stroke:rgba(255,255,255,.25);stroke-width:2;}
-.rev-num{
-  font-family:'Oswald',sans-serif;font-size:72px;font-weight:800;
-  line-height:1;color:#fff;margin-top:-8px;
-}
-.rev-lbl{
-  font-family:'Oswald',sans-serif;font-size:14px;font-weight:700;
-  text-transform:uppercase;letter-spacing:1px;line-height:1.2;
-}
-.rev-ribbon{
-  background:var(--red2);border-radius:3px;padding:5px 18px;
-  font-family:'Oswald',sans-serif;font-size:14px;font-weight:700;
-  letter-spacing:.5px;margin:6px 0;
-}
-.rev-s{color:var(--yellow);font-size:22px;letter-spacing:3px;}
-
-/* ===== SERVICES ===== */
-.services{background:#f5f5f5;padding:56px;}
-.svc-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:28px;}
-.svc-card{
-  background:#fff;border-radius:8px;padding:22px 14px 18px;
-  text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.07);
-  display:flex;flex-direction:column;align-items:center;
-  transition:transform .2s,box-shadow .2s;
-}
-.svc-card:hover{transform:translateY(-4px);box-shadow:0 8px 22px rgba(0,0,0,.14);}
-.svc-icon-wrap{
-  width:64px;height:64px;margin-bottom:12px;
-  display:flex;align-items:center;justify-content:center;
-}
-.svc-icon-wrap svg{width:52px;height:52px;}
-.svc-name{
-  font-family:'Oswald',sans-serif;font-size:13px;font-weight:700;
-  text-transform:uppercase;letter-spacing:.5px;color:var(--navy);
-  margin-bottom:8px;line-height:1.2;
-}
-.svc-desc{font-size:12px;color:#666;line-height:1.55;margin-bottom:14px;flex:1;}
-.svc-btn{
-  background:var(--navy);color:#fff;border:none;
-  padding:8px 16px;border-radius:3px;cursor:pointer;
-  font-family:'Oswald',sans-serif;font-size:11px;font-weight:700;
-  text-transform:uppercase;letter-spacing:.5px;
-  transition:background .2s;width:100%;
-}
-.svc-btn:hover{background:var(--red2);}
-
-/* ===== SERVICE AREA ===== */
-.area{
-  background:var(--navy);padding:44px 56px;
-  display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;
-}
-.area-left{display:flex;align-items:center;gap:20px;}
-.tx-svg{width:64px;height:64px;flex-shrink:0;}
-.tx-svg svg{width:100%;height:100%;}
-.area-heading{
-  font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;
-  color:#fff;text-transform:uppercase;line-height:1.2;
-}
-.area-heading span{color:var(--red2);font-size:17px;display:block;margin-top:3px;}
-.area-cities{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 32px;}
-.city{color:#fff;font-size:15px;display:flex;align-items:center;gap:8px;}
-.city-ck{color:var(--red2);font-weight:700;font-size:17px;}
-
-/* ===== CTA BOTTOM ===== */
-.cta-bottom{
-  background:var(--red2);padding:36px 56px;
-  display:grid;grid-template-columns:auto 1fr auto;
-  gap:28px;align-items:center;
-}
-.cta-logo img{height:86px;width:auto;}
-.cta-pre{
-  font-family:'Oswald',sans-serif;font-size:16px;font-weight:600;
-  color:rgba(255,255,255,.9);text-transform:uppercase;letter-spacing:.5px;
-}
-.cta-main{
-  font-family:'Oswald',sans-serif;font-size:40px;font-weight:800;
-  color:#fff;text-transform:uppercase;line-height:1.05;letter-spacing:-.5px;
-}
-.cta-sub{color:rgba(255,255,255,.88);font-size:14px;font-style:italic;margin-top:4px;}
-.cta-right{text-align:right;}
-.cta-ph{
-  font-family:'Oswald',sans-serif;font-size:34px;font-weight:800;
-  color:#fff;display:block;margin-bottom:12px;letter-spacing:.5px;
-}
-.btn-navy{
-  background:var(--navy);color:#fff;border:none;
-  padding:14px 24px;border-radius:4px;cursor:pointer;
-  font-family:'Oswald',sans-serif;font-size:16px;font-weight:700;
-  text-transform:uppercase;display:flex;align-items:center;
-  gap:8px;text-decoration:none;justify-content:center;
-  transition:opacity .2s;white-space:nowrap;
-}
-.btn-navy:hover{opacity:.85;}
-.cta-stars{color:var(--yellow);font-size:13px;margin-top:8px;text-align:center;}
-
-/* ===== FOOTER ===== */
-footer{
-  background:#071526;padding:18px 56px;
-  display:flex;justify-content:space-between;align-items:center;
-  border-top:1px solid rgba(255,255,255,.07);
-}
-.foot-copy{color:rgba(255,255,255,.45);font-size:12.5px;}
-.foot-badges{display:flex;gap:28px;}
-.foot-b{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.6);font-size:13px;}
-.foot-b svg{width:16px;height:16px;stroke:rgba(255,255,255,.6);fill:none;stroke-width:2;stroke-linecap:round;}
-.foot-social{display:flex;gap:10px;}
-.soc{
-  background:rgba(255,255,255,.1);color:#fff;border:none;
-  width:34px;height:34px;border-radius:50%;cursor:pointer;
-  font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;
-  transition:background .2s;
-}
-.soc:hover{background:var(--red2);}
-
-/* ===== FAB ===== */
-.fab{
-  position:fixed;bottom:22px;right:22px;
-  background:var(--red2);color:#fff;border:none;
-  width:54px;height:54px;border-radius:50%;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 4px 18px rgba(224,32,32,.55);z-index:999;
-  animation:pulse 2s infinite;
-}
-.fab svg{width:24px;height:24px;fill:#fff;}
-@keyframes pulse{
-  0%,100%{box-shadow:0 4px 18px rgba(224,32,32,.55);}
-  50%{box-shadow:0 4px 28px rgba(224,32,32,.8),0 0 0 10px rgba(224,32,32,.12);}
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:900px){
-  .top-bar{padding:8px 18px;font-size:12px;}
-  nav{padding:8px 18px;flex-wrap:wrap;gap:10px;}
-  .nav-links{display:none;}
-  .nav-logo img{height:70px;}
-
-  .hero{
-    grid-template-columns:1fr;
-    padding:36px 22px 28px;
-    text-align:center;
-  }
-  .hero-rays{display:none;}
-  .hero-h1{font-size:52px;}
-  .hero-tagline{font-size:18px;}
-  .hero-desc{max-width:100%;margin:0 auto 14px;}
-  .stars-row{justify-content:center;}
-  .trust-row{justify-content:center;}
-  .btns{justify-content:center;}
-  .phone-row{justify-content:center;}
-  .hero-right{margin-top:24px;}
-  .hero-right img{max-width:320px;}
-
-  .reviews{padding:36px 18px;}
-  .rev-grid{grid-template-columns:1fr;gap:16px;}
-
-  .services{padding:36px 18px;}
-  .svc-grid{grid-template-columns:repeat(2,1fr);gap:14px;}
-
-  .area{grid-template-columns:1fr;gap:24px;padding:36px 22px;text-align:center;}
-  .area-left{flex-direction:column;align-items:center;}
-  .area-cities{grid-template-columns:repeat(2,1fr);text-align:left;}
-
-  .cta-bottom{grid-template-columns:1fr;text-align:center;padding:32px 22px;gap:18px;}
-  .cta-right{text-align:center;}
-  .btn-navy{justify-content:center;}
-
-  footer{flex-direction:column;gap:14px;padding:20px 18px;text-align:center;}
-  .foot-badges{flex-wrap:wrap;justify-content:center;}
-}
-@media(max-width:520px){
-  .hero-h1{font-size:42px;}
-  .svc-grid{grid-template-columns:repeat(2,1fr);}
-  .cta-main{font-size:28px;}
-  .cta-ph{font-size:26px;}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- TOP BAR -->
 <div class="top-bar">
-  <div class="left">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-    EMERGENCY PLUMBING? WE'RE AVAILABLE 24/7!
-  </div>
-  <div class="right">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    817-760-0306
+  <div class="container">
+    <span>🚨 EMERGENCY PLUMBING? WE'RE AVAILABLE 24/7!</span>
+    <a href="tel:8177600306">📞 817-760-0306</a>
   </div>
 </div>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo"><img src="logo.jpg" alt="Godley Plumbing"></div>
-  <ul class="nav-links">
-    <li><a href="#">HOME</a></li>
-    <li><a href="#">SERVICES</a></li>
-    <li><a href="#">REVIEWS</a></li>
-    <li><a href="#">ABOUT</a></li>
-    <li><a href="#">CONTACT</a></li>
-  </ul>
-  <a href="tel:8177600306" class="nav-call">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    <div>
-      <span class="call-top">CALL NOW</span>
-      <span class="call-num">817-760-0306</span>
-    </div>
-  </a>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-rays"></div>
-
-  <div class="hero-left">
-    <h1 class="hero-h1">
-      NO CLOGS.<br>
-      <span class="line-red">NO WORRIES.</span>
-    </h1>
-    <div class="hero-tagline">We Make Plumbing Problems Run.</div>
-    <p class="hero-desc">Fast, honest plumbing service for homeowners across Godley and Johnson County.</p>
-
-    <div class="stars-row">
-      <span class="stars">★★★★★</span>
-      <span class="stars-txt">
-        5.0 Rating &nbsp;•&nbsp; 56 Google Reviews &nbsp;
-        <span class="g-dot">G</span>
-      </span>
-    </div>
-
-    <div class="trust-row">
-      <!-- Same-Day Service -->
-      <div class="trust-item">
-        <div class="trust-circle">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-        </div>
-        SAME-DAY<br>SERVICE
-      </div>
-      <!-- Upfront Pricing -->
-      <div class="trust-item">
-        <div class="trust-circle">
-          <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-        </div>
-        UPFRONT<br>PRICING
-      </div>
-      <!-- Licensed & Insured -->
-      <div class="trust-item">
-        <div class="trust-circle">
-          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        LICENSED &<br>INSURED
-      </div>
-      <!-- Family Owned -->
-      <div class="trust-item">
-        <div class="trust-circle">
-          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        FAMILY OWNED<br>& OPERATED
-      </div>
-    </div>
-
-    <div class="btns">
-      <a href="tel:8177600306" class="btn-red">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/></svg>
-        FIX MY PROBLEM NOW
-      </a>
-      <a href="#" class="btn-outline">GET FREE ESTIMATE</a>
-    </div>
-
-    <div class="phone-row">
-      <div class="ph-circle">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      </div>
-      <span class="ph-num">817-760-0306</span>
-      <span class="ph-arrow">→</span>
-      <span class="ph-tap">Tap to Call!</span>
-    </div>
-  </div>
-
-  <div class="hero-right">
-    <img src="hero.png" alt="Godley Plumbing - No Clogs No Worries">
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="reviews">
-  <div class="sec-title">WHAT YOUR NEIGHBORS ARE SAYING</div>
-  <div class="rev-grid">
-
-    <div class="rev-card">
-      <div class="rev-stars">★★★★★</div>
-      <div class="rev-quote">"</div>
-      <p class="rev-text">Had my water heater uninstalled and reinstalled in under 24 hours. Super knowledgeable, answered all my questions and explained everything clearly.</p>
-      <div class="rev-author">
-        <span>— Erik F.</span>
-        <div class="g-logo">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        </div>
-      </div>
-    </div>
-
-    <div class="rev-card">
-      <div class="rev-stars">★★★★★</div>
-      <div class="rev-quote">"</div>
-      <p class="rev-text">Robert corrected our plumbing problem quickly, on the same day that I called him. His work was correct and thorough.</p>
-      <div class="rev-author">
-        <span>— Beverly H.</span>
-        <div class="g-logo">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        </div>
-      </div>
-    </div>
-
-    <div class="rev-badge">
-      <div class="shield-wrap">
-        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
-      <div class="rev-num">56</div>
-      <div class="rev-lbl">FIVE-STAR<br>REVIEWS</div>
-      <div class="rev-ribbon">5.0 RATING</div>
-      <div class="rev-s">★★★★★</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services">
-  <div class="sec-title">OUR PLUMBING SERVICES</div>
-  <div class="svc-grid">
-
-    <!-- Drain Cleaning -->
-    <div class="svc-card">
-      <div class="svc-icon-wrap">
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="20" y="4" width="24" height="10" rx="2" fill="#0b1d35"/>
-          <rect x="28" y="14" width="8" height="30" fill="#0b1d35"/>
-          <ellipse cx="32" cy="48" rx="14" ry="6" fill="#0b1d35" opacity=".15"/>
-          <path d="M20 44 Q32 56 44 44" stroke="#0b1d35" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <path d="M24 50 Q32 60 40 50" stroke="#0b1d35" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".6"/>
-          <circle cx="32" cy="20" r="4" fill="#e02020"/>
-        </svg>
-      </div>
-      <div class="svc-name">Drain Cleaning</div>
-      <p class="svc-desc">We clear tough clogs and keep water flowing.</p>
-      <button class="svc-btn">LEARN MORE</button>
-    </div>
-
-    <!-- Leak Detection -->
-    <div class="svc-card">
-      <div class="svc-icon-wrap">
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M32 8 C32 8 16 28 16 40 a16 16 0 0 0 32 0 C48 28 32 8 32 8z" fill="#0b1d35"/>
-          <path d="M32 18 C32 18 22 32 22 40 a10 10 0 0 0 20 0 C42 32 32 18 32 18z" fill="#4a90d9" opacity=".6"/>
-          <circle cx="26" cy="42" r="3" fill="#fff" opacity=".5"/>
-        </svg>
-      </div>
-      <div class="svc-name">Leak Detection</div>
-      <p class="svc-desc">Find leaks early and save money on damage.</p>
-      <button class="svc-btn">LEARN MORE</button>
-    </div>
-
-    <!-- Water Heaters -->
-    <div class="svc-card">
-      <div class="svc-icon-wrap">
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="18" y="12" width="28" height="36" rx="4" fill="#0b1d35"/>
-          <rect x="22" y="16" width="20" height="6" rx="2" fill="#4a90d9" opacity=".5"/>
-          <circle cx="32" cy="36" r="6" fill="#e02020"/>
-          <rect x="28" y="48" width="3" height="8" rx="1" fill="#0b1d35"/>
-          <rect x="33" y="48" width="3" height="8" rx="1" fill="#0b1d35"/>
-          <path d="M28 8 Q32 4 36 8" stroke="#e02020" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="svc-name">Water Heaters</div>
-      <p class="svc-desc">Repair or replace. We keep you in hot water.</p>
-      <button class="svc-btn">LEARN MORE</button>
-    </div>
-
-    <!-- Sewer Repair -->
-    <div class="svc-card">
-      <div class="svc-icon-wrap">
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="28" width="48" height="10" rx="5" fill="#0b1d35"/>
-          <rect x="8" y="28" width="14" height="10" rx="5" fill="#4a90d9" opacity=".5"/>
-          <rect x="24" y="14" width="10" height="16" rx="3" fill="#0b1d35"/>
-          <rect x="30" y="38" width="10" height="12" rx="3" fill="#0b1d35"/>
-          <circle cx="29" cy="28" r="4" fill="#e02020"/>
-          <circle cx="35" cy="38" r="4" fill="#e02020"/>
-        </svg>
-      </div>
-      <div class="svc-name">Sewer Repair</div>
-      <p class="svc-desc">From minor fixes to major repairs. We do it all.</p>
-      <button class="svc-btn">LEARN MORE</button>
-    </div>
-
-    <!-- Toilet Repair -->
-    <div class="svc-card">
-      <div class="svc-icon-wrap">
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="18" y="8" width="20" height="14" rx="3" fill="#0b1d35"/>
-          <path d="M12 22 h40 a0 0 0 0 1 0 0 C52 42 44 52 32 52 C20 52 12 42 12 22z" fill="#0b1d35"/>
-          <rect x="20" y="10" width="16" height="4" rx="2" fill="#4a90d9" opacity=".4"/>
-          <path d="M22 36 Q32 44 42 36" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" opacity=".3"/>
-        </svg>
-      </div>
-      <div class="svc-name">Toilet Repair</div>
-      <p class="svc-desc">Running, leaking or clogged? We can help.</p>
-      <button class="svc-btn">LEARN MORE</button>
-    </div>
-
-    <!-- Emergency Plumbing -->
-    <div class="svc-card">
-      <div class="svc-icon-wrap">
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="32" cy="28" r="18" fill="#e02020" opacity=".12"/>
-          <circle cx="32" cy="28" r="12" fill="#e02020"/>
-          <path d="M32 14 C32 14 24 24 32 28 C40 24 32 14 32 14" fill="#fff" opacity=".4"/>
-          <rect x="29" y="38" width="6" height="16" rx="3" fill="#0b1d35"/>
-          <rect x="26" y="52" width="12" height="4" rx="2" fill="#0b1d35"/>
-          <circle cx="32" cy="28" r="3" fill="#fff"/>
-        </svg>
-      </div>
-      <div class="svc-name">Emergency Plumbing</div>
-      <p class="svc-desc">24/7 service for plumbing problems that can't wait.</p>
-      <button class="svc-btn">LEARN MORE</button>
-    </div>
-
-  </div>
-</section>
-
-<!-- SERVICE AREA -->
-<section class="area">
-  <div class="area-left">
-    <div class="tx-svg">
-      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M85 10 L85 35 L95 35 L95 50 L80 50 L80 65 L70 75 L65 85 L50 90 L35 80 L20 85 L10 75 L5 55 L10 40 L5 25 L20 20 L30 10 Z" fill="#cc1f1f" opacity=".85"/>
-        <star cx="42" cy="52" r="6" fill="#fff"/>
-        <polygon points="42,44 44,50 50,50 45,54 47,60 42,56 37,60 39,54 34,50 40,50" fill="#fff"/>
-      </svg>
-    </div>
-    <div>
-      <div class="area-heading">
-        PROUDLY SERVING
-        <span>GODLEY & SURROUNDING AREAS</span>
-      </div>
-    </div>
-  </div>
-  <div class="area-cities">
-    <div class="city"><span class="city-ck">✓</span> Godley</div>
-    <div class="city"><span class="city-ck">✓</span> Crowley</div>
-    <div class="city"><span class="city-ck">✓</span> Benbrook</div>
-    <div class="city"><span class="city-ck">✓</span> Cleburne</div>
-    <div class="city"><span class="city-ck">✓</span> Alvarado</div>
-    <div class="city"><span class="city-ck">✓</span> Fort Worth</div>
-    <div class="city"><span class="city-ck">✓</span> Joshua</div>
-    <div class="city"><span class="city-ck">✓</span> Burleson</div>
-    <div class="city"><span class="city-ck">✓</span> & More!</div>
-  </div>
-</section>
-
-<!-- CTA BOTTOM -->
-<section class="cta-bottom">
-  <div class="cta-logo"><img src="logo.jpg" alt="Godley Plumbing"></div>
-  <div>
-    <div class="cta-pre">DON'T LET A SMALL PLUMBING PROBLEM</div>
-    <div class="cta-main">BECOME A BIG ONE.</div>
-    <div class="cta-sub">Call Godley Plumbing Today — We'll make it go away!</div>
-  </div>
-  <div class="cta-right">
-    <span class="cta-ph">📞 817-760-0306</span>
-    <a href="tel:8177600306" class="btn-navy">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      CALL NOW
+<header class="header">
+  <div class="container nav">
+    <a href="#" class="logo-wrap">
+      <img src="logo.png" alt="Godley Plumbing" class="logo">
     </a>
-    <div class="cta-stars">★★★★★ &nbsp;5.0 Rating • 56 Google Reviews</div>
+
+    <nav class="desktop-nav">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="tel:8177600306" class="call-btn">
+      CALL NOW<br>
+      <small>817-760-0306</small>
+    </a>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-grid">
+
+    <div class="hero-content">
+
+      <h1>
+        <span class="white">NO CLOGS.</span>
+        <span class="red">NO WORRIES.</span>
+      </h1>
+
+      <h2>WE MAKE PLUMBING PROBLEMS RUN.</h2>
+
+      <p>
+        Fast, honest plumbing service for homeowners
+        across Godley and Johnson County.
+      </p>
+
+      <div class="rating-row">
+        ⭐⭐⭐⭐⭐
+        <span>5.0 Rating</span>
+        <span>•</span>
+        <span>56 Google Reviews</span>
+      </div>
+
+      <div class="trust-grid">
+        <div>✓ SAME-DAY SERVICE</div>
+        <div>✓ UPFRONT PRICING</div>
+        <div>✓ LICENSED & INSURED</div>
+        <div>✓ FAMILY OWNED</div>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="tel:8177600306" class="btn-primary">
+          ⚡ FIX MY PROBLEM NOW
+        </a>
+
+        <a href="#contact" class="btn-secondary">
+          GET FREE ESTIMATE
+        </a>
+      </div>
+
+      <div class="hero-phone">
+        📞 817-760-0306
+      </div>
+
+    </div>
+
+    <div class="hero-image">
+      <img src="hero.png" alt="Godley Plumbing Mascot">
+    </div>
+
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="foot-copy">© 2026 Godley Plumbing. All Rights Reserved.</div>
-  <div class="foot-badges">
-    <div class="foot-b">
-      <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      Licensed & Insured
+<section class="reviews-section" id="reviews">
+  <div class="container">
+
+    <h2 class="section-title">
+      WHAT YOUR NEIGHBORS ARE SAYING
+    </h2>
+
+    <div class="reviews-layout">
+
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          Had my water heater uninstalled and reinstalled in under 24 hours.
+          Super knowledgeable, answered all my questions and explained everything clearly.
+        </p>
+        <strong>— Erik F.</strong>
+      </article>
+
+      <article class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          Robert corrected our plumbing problem quickly, on the same day that I called him.
+          His work was correct and thorough.
+        </p>
+        <strong>— Beverly H.</strong>
+      </article>
+
+      <div class="review-badge">
+        <div class="badge-number">56</div>
+        <div>FIVE-STAR REVIEWS</div>
+        <div class="badge-rating">5.0 RATING</div>
+      </div>
+
     </div>
-    <div class="foot-b">
-      <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-      Family Owned
-    </div>
-    <div class="foot-b">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-      Same-Day Service
+
+  </div>
+</section>
+
+<section class="services-section" id="services">
+  <div class="container">
+
+    <h2 class="section-title">OUR PLUMBING SERVICES</h2>
+
+    <div class="services-grid">
+
+      <div class="service-card"><h3>Drain Cleaning</h3></div>
+      <div class="service-card"><h3>Leak Detection</h3></div>
+      <div class="service-card"><h3>Water Heaters</h3></div>
+      <div class="service-card"><h3>Sewer Repair</h3></div>
+      <div class="service-card"><h3>Toilet Repair</h3></div>
+      <div class="service-card"><h3>Emergency Plumbing</h3></div>
+
     </div>
   </div>
-  <div class="foot-social">
-    <button class="soc">f</button>
-    <button class="soc" style="font-weight:900;font-size:13px;">G</button>
+</section>
+
+<section class="service-area">
+  <div class="container">
+    <h2>PROUDLY SERVING GODLEY & SURROUNDING AREAS</h2>
+
+    <div class="areas">
+      <span>Godley</span>
+      <span>Cleburne</span>
+      <span>Joshua</span>
+      <span>Burleson</span>
+      <span>Crowley</span>
+      <span>Alvarado</span>
+      <span>Benbrook</span>
+      <span>Fort Worth</span>
+    </div>
+  </div>
+</section>
+
+<section class="bottom-cta">
+  <div class="container">
+
+    <h2>
+      DON'T LET A SMALL PLUMBING PROBLEM
+      BECOME A BIG ONE.
+    </h2>
+
+    <p>Call Godley Plumbing Today!</p>
+
+    <a href="tel:8177600306" class="call-btn-large">
+      817-760-0306
+    </a>
+
+  </div>
+</section>
+
+<footer class="footer" id="contact">
+  <div class="container">
+
+    <img src="logo.png" alt="Godley Plumbing Logo" class="footer-logo">
+
+    <p>Owned & Operated by Robert Covington</p>
+    <p>Licensed & Insured • Same-Day Service</p>
+
   </div>
 </footer>
 
-<button class="fab" onclick="window.location='tel:8177600306'">
-  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-</button>
+<a href="tel:8177600306" class="floating-call">
+📞 CALL NOW
+</a>
 
 </body>
 </html>
