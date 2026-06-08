@@ -306,7 +306,7 @@ body{
   .hero-grid{
     grid-template-columns:55% 45%;
     min-height:auto;
-    padding:35px 0 80px;
+    padding:35px 0 140px;
     gap:10px;
   }
 
@@ -328,7 +328,7 @@ body{
   }
 
   .hero-image img{
-    max-width:300px;
+    max-width:380px;
   }
 
   .rating-row{
@@ -336,8 +336,8 @@ body{
   }
 
   .trust-grid{
-    grid-template-columns:1fr;
-    font-size:.85rem;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
   }
 
   .hero-buttons{
