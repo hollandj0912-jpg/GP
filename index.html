@@ -1,106 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Godley Plumbing | V2</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godley Plumbing | Fast, Honest Plumbing Service</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-<div class="topbar">
-  <div class="container">
-    <span>24/7 EMERGENCY PLUMBING</span>
-    <a href="tel:8177600306">817-760-0306</a>
-  </div>
+<!-- TOP BAR -->
+
+<div class="top-bar">
+    <div class="container top-bar-inner">
+        <div class="top-message">
+            <i class="fas fa-bell"></i>
+            Emergency Plumbing? We're Available 24/7!
+        </div>
+
+        <a href="tel:8177600306" class="top-phone">
+            <i class="fas fa-phone"></i>
+            817-760-0306
+        </a>
+    </div>
 </div>
+
+<!-- HEADER -->
 
 <header class="header">
-  <div class="container nav">
-    <img src="logo.png" class="logo" alt="Godley Plumbing">
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#service-area">Service Area</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="call-btn" href="tel:8177600306">Call Now</a>
-  </div>
+    <div class="container header-inner">
+
+        <a href="#" class="logo-wrap">
+            <img src="logo.png" alt="Godley Plumbing Logo">
+        </a>
+
+        <nav class="nav">
+            <a href="#services">Services</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#service-area">Service Area</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="tel:8177600306" class="header-call-btn">
+            <i class="fas fa-phone"></i>
+            Call Now
+        </a>
+
+    </div>
 </header>
 
+<!-- HERO -->
+
 <section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <div class="eyebrow">GODLEY PLUMBING</div>
-      <h1>GOT CLOGS?<br><span>NO WORRIES.</span></h1>
-      <p class="sub">Fast, honest plumbing service serving Godley and Johnson County.</p>
-      <div class="rating">★★★★★ 56 Five‑Star Reviews</div>
-      <div class="cta-row">
-        <a href="tel:8177600306" class="primary">Call Now</a>
-        <a href="#contact" class="secondary">Free Estimate</a>
-      </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-inner">
+
+        <div class="hero-content">
+
+            <span class="hero-kicker">
+                GODLEY PLUMBING
+            </span>
+
+            <h1>
+                GOT CLOGS?<br>
+                <span>NO WORRIES.</span>
+            </h1>
+
+            <h2>
+                We Make Plumbing Problems Run.
+            </h2>
+
+            <p>
+                Fast, honest plumbing service for homeowners
+                across Godley and Johnson County.
+            </p>
+
+            <div class="review-line">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <span>5.0 Rating</span>
+
+                <span class="dot">•</span>
+
+                <span>56 Google Reviews</span>
+
+            </div>
+
+            <div class="trust-row">
+
+                <div class="trust-item">
+                    <img src="star-reviews.png" alt="">
+                    <span>56+ Reviews</span>
+                </div>
+
+                <div class="trust-item">
+                    <img src="shield-insured.png" alt="">
+                    <span>Licensed & Insured</span>
+                </div>
+
+                <div class="trust-item">
+                    <img src="clock-sameday.png" alt="">
+                    <span>Same-Day Service</span>
+                </div>
+
+                <div class="trust-item">
+                    <img src="tag-pricing.png" alt="">
+                    <span>Upfront Pricing</span>
+                </div>
+
+            </div>
+
+            <div class="hero-buttons">
+
+                <a href="tel:8177600306" class="btn btn-primary">
+                    Fix My Problem Now
+                </a>
+
+                <a href="#contact" class="btn btn-secondary">
+                    Get Free Estimate
+                </a>
+
+            </div>
+
+            <a href="tel:8177600306" class="hero-phone">
+                <i class="fas fa-phone"></i>
+                817-760-0306
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="hero.png" alt="Godley Plumbing Hero">
+
+        </div>
+
     </div>
-    <div class="hero-art">
-      <img src="hero.png" alt="Mascot">
+
+</section>
+
+<!-- REVIEWS -->
+
+<section id="reviews" class="reviews">
+
+    <div class="container">
+
+        <div class="section-title">
+            WHAT YOUR NEIGHBORS ARE SAYING
+        </div>
+
+        <div class="reviews-grid">
+
+            <div class="review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    Had my water heater replaced in under 24 hours.
+                    Excellent communication and service.
+                </p>
+
+                <strong>
+                    — Erik F.
+                </strong>
+
+            </div>
+
+            <div class="review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    Corrected our plumbing problem the same day
+                    we called. Thorough and professional.
+                </p>
+
+                <strong>
+                    — Beverly H.
+                </strong>
+
+            </div>
+
+            <div class="review-badge">
+
+                <img src="star-reviews.png" alt="Reviews">
+
+            </div>
+
+        </div>
+
     </div>
-  </div>
+
 </section>
 
-<section class="trustbar">
-  <div>56+ Reviews</div>
-  <div>Licensed & Insured</div>
-  <div>Same‑Day Service</div>
-  <div>Upfront Pricing</div>
+<!-- SERVICES -->
+
+<section id="services" class="services">
+
+    <div class="container">
+
+        <div class="section-title">
+            OUR PLUMBING SERVICES
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <img src="drain-cleaning.png" alt="">
+                <h3>Drain Cleaning</h3>
+                <p>We clear tough clogs and keep water flowing.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="leak-detection.png" alt="">
+                <h3>Leak Detection</h3>
+                <p>Find leaks early and save money on damage.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="water-heater.png" alt="">
+                <h3>Water Heaters</h3>
+                <p>Repair or replacement done right.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="toilet-repair.png" alt="">
+                <h3>Toilet Repair</h3>
+                <p>Running, leaking or clogged? We can help.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="sewer-repair.png" alt="">
+                <h3>Sewer Repair</h3>
+                <p>From minor repairs to major issues.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="emergency-plumbing.png" alt="">
+                <h3>Emergency Plumbing</h3>
+                <p>24/7 service when problems can't wait.</p>
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section class="services container" id="services">
-  <h2>What We Fix</h2>
-  <div class="grid">
-    <div class="card"><h3>Drain Cleaning</h3><p>Fast clog removal for kitchens, bathrooms and main lines.</p></div>
-    <div class="card"><h3>Water Heaters</h3><p>Repair and replacement done right.</p></div>
-    <div class="card"><h3>Leak Detection</h3><p>Find problems before they become expensive.</p></div>
-    <div class="card"><h3>Toilet Repair</h3><p>Running, leaking or clogged—we fix it.</p></div>
-    <div class="card"><h3>Sewer Repair</h3><p>From small repairs to major line issues.</p></div>
-    <div class="card"><h3>Emergency Plumbing</h3><p>Available when problems can't wait.</p></div>
-  </div>
+<!-- SERVICE AREA -->
+
+<section id="service-area" class="service-area">
+
+    <div class="container area-inner">
+
+        <div class="area-left">
+
+            <img src="texas-service-area.png" alt="Service Area">
+
+            <div>
+
+                <h2>Proudly Serving</h2>
+
+                <span>
+                    Godley & Surrounding Areas
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="area-right">
+
+            <ul>
+                <li>Godley</li>
+                <li>Cleburne</li>
+                <li>Joshua</li>
+            </ul>
+
+            <ul>
+                <li>Crowley</li>
+                <li>Alvarado</li>
+                <li>Burleson</li>
+            </ul>
+
+            <ul>
+                <li>Benbrook</li>
+                <li>Fort Worth</li>
+                <li>& More!</li>
+            </ul>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section class="proof">
- <div class="container proof-wrap">
-  <div class="big">56+</div>
-  <div>
-   <h2>Why Homeowners Choose Godley Plumbing</h2>
-   <p>Fast response times. Honest pricing. Work done right. Trusted by homeowners throughout Johnson County.</p>
-  </div>
- </div>
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container cta-inner">
+
+        <div class="cta-logo">
+
+            <img src="mascot-badge.png" alt="Mascot Badge">
+
+        </div>
+
+        <div class="cta-text">
+
+            <h2>
+                DON'T LET A SMALL PLUMBING PROBLEM
+            </h2>
+
+            <h3>
+                BECOME A BIG ONE.
+            </h3>
+
+            <p>
+                Call Godley Plumbing Today!
+            </p>
+
+        </div>
+
+        <div class="cta-phone">
+
+            <div class="cta-number">
+                817-760-0306
+            </div>
+
+            <a href="tel:8177600306" class="btn btn-dark">
+                Call Now
+            </a>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section class="reviews container" id="reviews">
-<h2>Customer Reviews</h2>
-<div class="grid">
-<div class="review">★★★★★<p>Had my water heater replaced in under 24 hours. Excellent communication and service.</p><strong>— Erik F.</strong></div>
-<div class="review">★★★★★<p>Corrected our plumbing problem the same day we called. Thorough and professional.</p><strong>— Beverly H.</strong></div>
-<div class="review stat"><span>56+</span><small>Five‑Star Reviews</small></div>
-</div>
-</section>
+<!-- FOOTER -->
 
-<section class="service-area" id="service-area">
-<div class="container">
-<h2>Proudly Serving</h2>
-<p>Godley • Burleson • Crowley • Joshua • Benbrook • Cleburne • Fort Worth • Alvarado</p>
-</div>
-</section>
+<footer id="contact" class="footer">
 
-<section class="final-cta" id="contact">
-<div class="container">
-<h2>STILL GOT CLOGS?</h2>
-<p>LET'S MAKE THEM RUN.</p>
-<a href="tel:8177600306">817‑760‑0306</a>
-</div>
-</section>
+    <div class="container">
+
+        <div class="footer-trust">
+
+            <div>Licensed & Insured</div>
+
+            <div>Family Owned</div>
+
+            <div>Same-Day Service</div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Godley Plumbing. All Rights Reserved.
+            </p>
+
+            <div class="footer-social">
+
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-google"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- FLOATING CALL BUTTON -->
+
+<a href="tel:8177600306" class="floating-call">
+    <i class="fas fa-phone"></i>
+</a>
 
 </body>
 </html>
