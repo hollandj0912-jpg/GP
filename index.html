@@ -7,7 +7,7 @@
   <meta name="description" content="Fast, honest plumbing service for homeowners across Godley and Johnson County. Same-day service, upfront pricing, licensed & insured. Call 817-760-0306.">
 
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow+Condensed:ital,wght@1,700;1,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow+Condensed:ital,wght@1,700;1,800&family=Dancing+Script:wght@700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -32,6 +32,7 @@
     <a href="#" class="logo-wrap">
       <img src="logo.png" alt="Godley Plumbing Logo">
     </a>
+
     <nav class="nav">
       <a href="#">Home</a>
       <a href="#services">Services</a>
@@ -39,13 +40,79 @@
       <a href="#service-area">About</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a href="tel:8177600306" class="header-call-btn">
-      <i class="fas fa-phone"></i>
-      <span class="call-text">Call Now</span>
-      817-760-0306
-    </a>
+
+    <div class="header-right">
+      <a href="tel:8177600306" class="header-call-btn">
+        <i class="fas fa-phone"></i>
+        <span class="call-text">Call Now</span>
+        817-760-0306
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile dropdown menu -->
+  <div class="mobile-nav" id="mobileNav">
+    <nav class="mobile-nav-links">
+      <a href="#" onclick="closeMobileNav()"><i class="fas fa-home"></i> Home</a>
+      <a href="#services" onclick="closeMobileNav()"><i class="fas fa-wrench"></i> Services</a>
+
+      <div class="mobile-nav-group">
+        <button class="mobile-nav-toggle" onclick="toggleSubMenu(this)">
+          <i class="fas fa-map-marker-alt"></i> Service Areas
+          <i class="fas fa-chevron-down toggle-icon"></i>
+        </button>
+        <div class="mobile-subnav">
+          <a href="godley.html" onclick="closeMobileNav()">Godley</a>
+          <a href="cleburne.html" onclick="closeMobileNav()">Cleburne</a>
+          <a href="joshua.html" onclick="closeMobileNav()">Joshua</a>
+          <a href="burleson.html" onclick="closeMobileNav()">Burleson</a>
+          <a href="crowley.html" onclick="closeMobileNav()">Crowley</a>
+          <a href="alvarado.html" onclick="closeMobileNav()">Alvarado</a>
+          <a href="fort-worth.html" onclick="closeMobileNav()">Fort Worth</a>
+          <a href="benbrook.html" onclick="closeMobileNav()">Benbrook</a>
+        </div>
+      </div>
+
+      <a href="#reviews" onclick="closeMobileNav()"><i class="fas fa-star"></i> Reviews</a>
+      <a href="about.html" onclick="closeMobileNav()"><i class="fas fa-users"></i> About Us</a>
+      <a href="#contact" onclick="closeMobileNav()"><i class="fas fa-envelope"></i> Contact</a>
+      <a href="tel:8177600306" class="mobile-call-link"><i class="fas fa-phone"></i> 817-760-0306</a>
+    </nav>
   </div>
 </header>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+
+  hamburger.addEventListener('click', () => {
+    const open = mobileNav.classList.toggle('open');
+    hamburger.classList.toggle('active', open);
+    hamburger.setAttribute('aria-expanded', open);
+  });
+
+  function closeMobileNav() {
+    mobileNav.classList.remove('open');
+    hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', false);
+  }
+
+  function toggleSubMenu(btn) {
+    const sub = btn.nextElementSibling;
+    const icon = btn.querySelector('.toggle-icon');
+    sub.classList.toggle('open');
+    icon.classList.toggle('fa-chevron-down');
+    icon.classList.toggle('fa-chevron-up');
+  }
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.header')) closeMobileNav();
+  });
+</script>
 
 <!-- ===== HERO ===== -->
 <section class="hero">
