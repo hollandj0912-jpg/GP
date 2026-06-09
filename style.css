@@ -73,11 +73,11 @@ ul { list-style: none; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 0;
+  padding: 14px 0;
   gap: 20px;
 }
 .logo-wrap img {
-  width: 140px;
+  width: 185px;
   height: auto;
 }
 .nav {
@@ -141,7 +141,7 @@ ul { list-style: none; }
   grid-template-columns: 55% 45%;
   align-items: center;
   gap: 0;
-  min-height: 780px;
+  min-height: 92vh;
   padding: 60px 0;
 }
 
@@ -151,87 +151,87 @@ ul { list-style: none; }
 .hero-kicker {
   display: block;
   font-family: 'Oswald', sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
-  letter-spacing: 5px;
+  letter-spacing: 7px;
   color: rgba(255,255,255,.75);
   text-transform: uppercase;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
 
 .hero h1 {
   font-family: 'Barlow Condensed', 'Oswald', sans-serif;
-  font-size: clamp(70px, 9.5vw, 136px);
+  font-size: clamp(80px, 11vw, 160px);
   line-height: .84;
   color: #fff;
   text-transform: uppercase;
   font-weight: 800;
   font-style: italic;
-  letter-spacing: -1px;
-  margin-bottom: 20px;
-  text-shadow: 4px 4px 0px rgba(0,0,0,.35);
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+  text-shadow: 5px 5px 0px rgba(0,0,0,.4);
 }
 .hero h1 span {
   color: var(--red);
   display: block;
-  text-shadow: 4px 4px 0px rgba(150,0,0,.4);
+  text-shadow: 5px 5px 0px rgba(150,0,0,.45);
 }
 
 .hero h2 {
   font-family: 'Dancing Script', cursive;
-  font-size: clamp(26px, 3.4vw, 48px);
+  font-size: clamp(30px, 4vw, 58px);
   color: #fff;
   font-weight: 700;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
   line-height: 1.2;
-  text-shadow: 2px 2px 8px rgba(0,0,0,.4);
+  text-shadow: 2px 2px 10px rgba(0,0,0,.4);
 }
 
 .hero-desc {
-  color: rgba(255,255,255,.88);
-  font-size: clamp(16px, 1.4vw, 20px);
+  color: rgba(255,255,255,.92);
+  font-size: clamp(17px, 1.6vw, 22px);
   line-height: 1.65;
-  margin-bottom: 20px;
-  max-width: 520px;
+  margin-bottom: 24px;
+  max-width: 540px;
 }
 
 .review-line {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   flex-wrap: wrap;
 }
-.stars { color: #ffd12a; font-size: 20px; letter-spacing: 2px; }
+.stars { color: #ffd12a; font-size: 24px; letter-spacing: 2px; }
 .dot { opacity: .5; }
 
 /* Trust badges row */
 .trust-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin-bottom: 32px;
+  gap: 14px;
+  margin-bottom: 36px;
 }
 .trust-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 10px;
-  padding: 10px 12px;
+  gap: 10px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 12px;
+  padding: 14px 16px;
 }
 .trust-item i {
-  font-size: 20px;
+  font-size: 24px;
   color: var(--red);
   flex-shrink: 0;
 }
 .trust-item span {
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .5px;
@@ -241,18 +241,18 @@ ul { list-style: none; }
 /* Hero Buttons */
 .hero-buttons {
   display: flex;
-  gap: 14px;
+  gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 17px 30px;
-  border-radius: 10px;
+  gap: 10px;
+  padding: 20px 36px;
+  border-radius: 12px;
   font-family: 'Oswald', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -264,15 +264,28 @@ ul { list-style: none; }
 .btn-primary {
   background: var(--red);
   color: #fff;
-  box-shadow: 0 6px 24px rgba(239,43,36,.4);
+  box-shadow: 0 8px 28px rgba(239,43,36,.5);
 }
-.btn-primary:hover { background: var(--red-dark); transform: translateY(-2px); }
+.btn-primary:hover { background: var(--red-dark); transform: translateY(-3px); }
 .btn-secondary {
   background: transparent;
   border: 2px solid rgba(255,255,255,.7);
   color: #fff;
 }
 .btn-secondary:hover { background: rgba(255,255,255,.12); border-color: #fff; }
+
+/* Hero Phone */
+.hero-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(36px, 4.5vw, 64px);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
 
 /* Hero Phone */
 .hero-phone {
@@ -302,18 +315,22 @@ ul { list-style: none; }
 /* Hero Image */
 .hero-image {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  overflow: visible;
 }
 .hero-image img {
-  width: 100%;
-  max-width: 640px;
-  filter: drop-shadow(0 24px 48px rgba(0,0,0,.5));
+  width: 115%;
+  max-width: 820px;
+  margin-bottom: -40px;
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,.6));
   animation: float 4s ease-in-out infinite;
+  position: relative;
+  z-index: 3;
 }
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
+  50% { transform: translateY(-16px); }
 }
 
 /* ============ SECTION TITLES ============ */
@@ -906,7 +923,7 @@ ul { list-style: none; }
   .top-bar { display: none; }
 
   /* Header: tight as possible, no gap to hero */
-  .header { border-bottom: none; }
+  .header { border-bottom: none; margin-bottom: 0; }
   .header-inner { padding: 5px 0; }
   .logo-wrap img { width: 100px; }
   .header-call-btn {
@@ -921,22 +938,23 @@ ul { list-style: none; }
   .hero {
     background-color: #020e2e;
     background-image: radial-gradient(ellipse at 30% 50%, #1a4db0 0%, #08286f 40%, #020e2e 100%);
+    margin-top: -1px;
   }
   .hero-image {
     display: block;
     position: absolute;
-    top: 0;
+    top: -20px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 340px;
+    max-width: 380px;
     z-index: 1;
-    opacity: .22;
+    opacity: .38;
     pointer-events: none;
   }
   .hero-image img {
     width: 100%;
-    max-width: 340px;
+    max-width: 380px;
     margin: 0 auto;
     filter: none;
     animation: none;
