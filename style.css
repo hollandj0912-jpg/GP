@@ -78,7 +78,7 @@ ul { list-style: none; }
   gap: 20px;
 }
 .logo-wrap img {
-  width: 130px;
+  width: 160px;
   height: auto;
 }
 .nav {
@@ -930,28 +930,37 @@ ul { list-style: none; }
 @media (max-width: 600px) {
 
   /* Kill the top bar — pure dead weight on mobile */
-  .top-bar { display: none; }
+  .top-bar { display: none !important; }
 
-  /* Header: fixed tight height, no gap */
-  .header { border-bottom: none; }
+  /* Header: force tight height no matter what 992px set */
+  .header { border-bottom: none !important; }
   .header-inner {
-    padding: 0;
-    height: 52px;
+    padding: 0 !important;
+    height: 54px !important;
+    min-height: unset !important;
   }
-  .logo-wrap img { width: 80px; }
+  .logo-wrap img { width: 78px !important; }
   .header-call-btn {
-    padding: 8px 14px;
-    font-size: 13px;
-    gap: 6px;
-    border-radius: 8px;
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+    gap: 5px !important;
+    border-radius: 8px !important;
   }
-  .header-call-btn .call-text { display: none; }
+  .header-call-btn .call-text { display: none !important; }
 
   /* Hero: mascot sits as absolute positioned img behind content */
   .hero {
-    background-color: #020e2e;
-    background-image: radial-gradient(ellipse at 30% 50%, #1a4db0 0%, #08286f 40%, #020e2e 100%);
-    margin-top: -1px;
+    background-color: #020e2e !important;
+    background-image: radial-gradient(ellipse at 30% 50%, #1a4db0 0%, #08286f 40%, #020e2e 100%) !important;
+    margin-top: 0 !important;
+  }
+  .hero-inner {
+    grid-template-columns: 1fr !important;
+    padding: 0 0 44px !important;
+    min-height: 88vh !important;
+    align-items: flex-end !important;
+    text-align: center !important;
+    gap: 0 !important;
   }
   .hero-image {
     display: block;
