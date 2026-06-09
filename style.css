@@ -73,7 +73,7 @@ ul { list-style: none; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 0;
+  padding: 6px 0;
   gap: 20px;
 }
 .logo-wrap img {
@@ -161,14 +161,14 @@ ul { list-style: none; }
 
 .hero h1 {
   font-family: 'Barlow Condensed', 'Oswald', sans-serif;
-  font-size: clamp(80px, 11vw, 160px);
-  line-height: .84;
+  font-size: clamp(72px, 9.5vw, 130px);
+  line-height: .86;
   color: #fff;
   text-transform: uppercase;
   font-weight: 800;
   font-style: italic;
   letter-spacing: -2px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   text-shadow: 5px 5px 0px rgba(0,0,0,.4);
 }
 .hero h1 span {
@@ -879,7 +879,11 @@ ul { list-style: none; }
   .hamburger { display: flex; }
   .mobile-nav { display: block; }
 
-  /* Hero: stack text FIRST, image below — no order flip */
+  /* Shrink header at tablet too */
+  .header-inner { padding: 4px 0; }
+  .logo-wrap img { width: 120px; }
+
+  /* Hero: stack text FIRST, image below */
   .hero-inner {
     grid-template-columns: 1fr;
     min-height: auto;
@@ -947,14 +951,14 @@ ul { list-style: none; }
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 380px;
+    max-width: 420px;
     z-index: 1;
-    opacity: .38;
+    opacity: .55;
     pointer-events: none;
   }
   .hero-image img {
     width: 100%;
-    max-width: 380px;
+    max-width: 420px;
     margin: 0 auto;
     filter: none;
     animation: none;
