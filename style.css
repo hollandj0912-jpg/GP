@@ -887,9 +887,9 @@ ul { list-style: none; }
   .mobile-nav { display: block; }
 
   /* Shrink header at tablet */
-  .header { border-bottom: none; }
-  .header-inner { padding: 4px 0; }
-  .logo-wrap img { width: 120px; }
+  .header { border-bottom: none !important; }
+  .header-inner { padding: 0 !important; height: 72px !important; }
+  .logo-wrap img { width: 130px !important; }
 
   /* Hero butts directly against header */
   .hero { margin-top: 0; }
